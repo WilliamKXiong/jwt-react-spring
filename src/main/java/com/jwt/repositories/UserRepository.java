@@ -9,4 +9,5 @@ import com.jwt.entities.User;
 public interface UserRepository extends JpaRepository<User, Integer>{
 	List<User> findByFirstName(String firstName);
 	List<User> findByLastName(String lastName);
+	User findByUserId(int userId);
 }
