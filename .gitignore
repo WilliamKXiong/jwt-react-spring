@@ -1,5 +1,11 @@
 HELP.md
-target/
+target/antrun/
+target/generated-sources/
+target/maven-archiver/
+target/maven-status/
+target/node/
+target/demo-0.0.0-SNAPSHOT.jar.original
+target/classes/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
