@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jwt.repositories.UserRepository;
-import com.jwt.entities.User;
+import com.jwt.repositories.PersonRepository;
+import com.jwt.entities.Person;
 
 @RestController
 public class HomePageController {
