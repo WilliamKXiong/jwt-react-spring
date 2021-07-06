@@ -1,9 +1,9 @@
-import './Login.css'
+import './Register.css'
 import { Component } from 'react';
 import { Form, Row, Col, Container, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-class Login extends Component {
+class Register extends Component {
     render() {
         return (
             <Container>
@@ -12,7 +12,7 @@ class Login extends Component {
                     <Col className="col-form">
                         <Form>
                             <Form.Group>
-                                <span className="header-form">Login</span>
+                                <span className="header-form">Register</span>
                             </Form.Group>
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
@@ -41,4 +41,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default Register;
