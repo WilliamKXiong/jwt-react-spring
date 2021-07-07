@@ -34,8 +34,8 @@ public class HomePageController {
 
 	@RequestMapping("/test")
 	public String test() {
-		
-		return "Test";
+		String dir = System.getProperty("user.dir");
+		return dir;
 	}
 	
 	@RequestMapping("/hello")

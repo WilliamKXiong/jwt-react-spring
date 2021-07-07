@@ -1,3 +1,7 @@
+-Springboot application runs with React build folder located in /target/classes/public
+	-need to work on automatically copying output of "npm run build" straight to /target/classes/public
+	-can manually move contents of src/main/reactjs/build to /target/classes/public to solve this
+
 //maven-frontend//
 mvn clean install
 

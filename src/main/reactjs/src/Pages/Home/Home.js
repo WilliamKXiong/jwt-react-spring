@@ -19,7 +19,7 @@ class Home extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <div className="App-intro">
-            <h2>Persons</h2>
+            <h2><a href="/login">Persons</a></h2>
             {persons.map(user =>
               <div key={user.id}>
                 [firstName={user.firstName}, lastName={user.lastName}, email={user.email}]

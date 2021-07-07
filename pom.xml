@@ -109,6 +109,10 @@
 										<fileset
 											dir="${project.basedir}/src/main/reactjs/build" />
 									</copy>
+									<copy todir="${project.build.directory}/database">
+										<fileset
+											dir="${project.basedir}/database" />
+									</copy>
 								</target>
 							</configuration>
 							<goals>

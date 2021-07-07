@@ -38,10 +38,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
     	//load static files, by default WebSecurity blocks them
     	//httpSecurity.authorizeRequests().antMatchers("/bootstrap/**", "/css/**","/img/**","/jquery/**","/js/**").permitAll();
-    	
+
     	//only allow certain pages to be viewed if not logged in
     	httpSecurity.csrf().disable()
-    		.authorizeRequests().antMatchers("/", "/authenticate", "/login", "/register", "/person/**", "/test").permitAll()
+    		.authorizeRequests().antMatchers("/", "/authenticate", "/login", "/register", "/person/**",
+    				"/test", "/home", "/static/**"
+    				).permitAll()
 			.anyRequest().authenticated().and().
 			exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
 			.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
