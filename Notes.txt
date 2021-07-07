@@ -1,0 +1,10 @@
+//maven-frontend//
+mvn clean install
+
+//h2 database info//
+
+localhost:9090/h2
+
+JDBC URL: jdbc:h2:./database/testdb
+User Name: root
+Password: admin

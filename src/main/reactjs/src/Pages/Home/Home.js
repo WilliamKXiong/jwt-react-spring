@@ -3,26 +3,26 @@ import { Component } from 'react';
 import logo from '../../logo.svg'
 
 class Home extends Component {
-  state = {
-    users: []
+  state = { //create user json
+    persons: []
   };
 
   async componentDidMount() {
-    const response = await fetch('/user/all');
-    const body = await response.json();
-    this.setState({ users: body });
+    const response = await fetch('/person/all');
+    const body = await response.json(); //get json from requestmapping from backend
+    this.setState({ persons: body }); //set users json
   }
   render() {
-    const { users } = this.state;
+    const { persons } = this.state; 
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <div className="App-intro">
-            <h2>Users</h2>
-            {users.map(user =>
+            <h2>Persons</h2>
+            {persons.map(user =>
               <div key={user.id}>
-                [firstName={user.firstName}, lastName={user.lastName}]
+                [firstName={user.firstName}, lastName={user.lastName}, email={user.email}]
               </div>
             )}
           </div>

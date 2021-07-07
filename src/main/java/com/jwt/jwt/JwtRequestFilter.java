@@ -1,6 +1,7 @@
 package com.jwt.jwt;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -32,7 +33,6 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 			throws ServletException, IOException {
 
 		final String requestTokenHeader = request.getHeader("Authorization");
-
 		System.out.println("requestTokenHeader = " + requestTokenHeader);
 		String username = null;
 		String jwtToken = null;
@@ -43,7 +43,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 			jwtToken = requestTokenHeader.substring(7); // cuts out Bearer
 
 			try {
-				System.out.println(jwtTokenUtil.getUsernameFromToken(jwtToken));
+				System.out.println("username:" + jwtTokenUtil.getUsernameFromToken(jwtToken));
 				username = jwtTokenUtil.getUsernameFromToken(jwtToken);
 			} catch (IllegalArgumentException e) {
 				System.out.println("Unable to get JWT Token");

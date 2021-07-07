@@ -41,7 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     	
     	//only allow certain pages to be viewed if not logged in
     	httpSecurity.csrf().disable()
-    		.authorizeRequests().antMatchers("/", "/authenticate").permitAll()
+    		.authorizeRequests().antMatchers("/", "/authenticate", "/login", "/register", "/person/**", "/test").permitAll()
 			.anyRequest().authenticated().and().
 			exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
 			.sessionCreationPolicy(SessionCreationPolicy.STATELESS);

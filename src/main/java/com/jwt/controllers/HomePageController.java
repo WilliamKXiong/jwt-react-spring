@@ -31,14 +31,13 @@ public class HomePageController {
 
 	@Autowired
 	private MyUserDetailsService userDetailsService;
-	
-	@RequestMapping("/")
-	public String index() {
+
+	@RequestMapping("/test")
+	public String test() {
 		
-		return "Hello World!";
+		return "Test";
 	}
 	
-
 	@RequestMapping("/hello")
 	public String index2() {
 		
