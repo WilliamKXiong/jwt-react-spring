@@ -21,12 +21,14 @@ public class Person implements Serializable {
 		this.firstName="";
 		this.lastName="";
 		this.email="";
+		this.password="";
 	}
-	public Person(String firstName, String lastName, String email) {
+	public Person(String firstName, String lastName, String email, String password) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.password = password;
 	}
 
 	@Id
@@ -43,6 +45,8 @@ public class Person implements Serializable {
 	@Column(name = "person_email")
 	private String email;
 
+	@Column(name = "person_password")
+	private String password;
 
 	public int getPersonId() {
 		return personId;
@@ -70,5 +74,11 @@ public class Person implements Serializable {
 	
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

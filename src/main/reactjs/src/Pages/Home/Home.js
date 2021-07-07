@@ -22,7 +22,7 @@ class Home extends Component {
             <h2><a href="/login">Persons</a></h2>
             {persons.map(user =>
               <div key={user.id}>
-                [firstName={user.firstName}, lastName={user.lastName}, email={user.email}]
+                [firstName={user.firstName}, lastName={user.lastName}, email={user.email}, password={user.password}]
               </div>
             )}
           </div>

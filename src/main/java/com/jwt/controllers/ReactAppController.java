@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * This class containers a controller that will route any mapping 
- * not already define in Spring to Reacts router
- * So if Spring does not have the mapping for a url,
+ * not already defined in Spring to React's router.
+ * So, if Spring does not have the mapping for a url,
  * then React will take care of that routing.
  * Spring routing takes priority over Reacts.
  */

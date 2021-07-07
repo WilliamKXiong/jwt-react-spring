@@ -4,5 +4,6 @@ CREATE TABLE PERSON (
   id INT AUTO_INCREMENT  PRIMARY KEY,
   person_first_name VARCHAR(250) NOT NULL,
   person_last_name VARCHAR(250) NOT NULL,
-  person_email VARCHAR(250) DEFAULT NULL
+  person_email VARCHAR(250) DEFAULT NULL.
+  person_password VARCHAR(250) DEFAULT NULL
 );
